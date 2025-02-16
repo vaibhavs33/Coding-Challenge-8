@@ -12,3 +12,18 @@ function calculateSalary(baseSalary, bonus, taxRate) {
 //Test cases - Values can be changed
 calculateSalary(5000, 500, 0.1); //Expected output - Net salary: $5000.00
 calculateSalary(7000, 1000, 0.15); //Expected output - Net salary: $6950.00
+
+//Task 2 - Product Price After Discount
+
+//Function expression to calculate the final price after a discount
+const calculateDiscount = function(price, discountRate) {
+    //Calculating the final price by subtracting the discount from the original price
+    const finalPrice = price - (price * discountRate);
+
+    //Logging the final price to the console to two decimal places
+    console.log(`Final price: $${finalPrice.toFixed(2)}`);
+};
+
+//Test cases - Values can be changed
+calculateDiscount(100, 0.2); //Expected output - Final price: $80.00
+calculateDiscount(250, 0.15); //Expected output - Final price: $212.50
