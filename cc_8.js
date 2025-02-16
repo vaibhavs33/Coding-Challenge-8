@@ -78,3 +78,18 @@ function calculateRentalCost(days, carType, insurance = false) {
 //Test cases - Values can be changed
 calculateRentalCost(3, "Economy", true); //Expected output - Total rental cost: $180
 calculateRentalCost(5, "Luxury", false); //Expected output - Total rental cost: $500
+
+//Task 5 - Loan Payment Calculation
+
+//Function to calculate the total loan payment based on the principal, rate, and time
+function calculateLoanPayment(principal, rate, time) {
+    //Calculating the total payment
+    const totalPayment = principal + (principal * rate * time);
+
+    //Logging the total payment to the console to two decimal places
+    console.log(`Total payment: $${totalPayment.toFixed(2)}`);
+};
+
+//Test cases - Values can be changed
+calculateLoanPayment(1000, 0.05, 2); //Expected output - Total payment: $1100.00
+calculateLoanPayment(5000, 0.07, 3); //Expected output - Total payment: $6050.00
