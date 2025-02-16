@@ -133,3 +133,18 @@ let cart = createCartTracker();
 //Test cases - Values can be changed
 cart(20); //Expected output - Total cart value: $20
 cart(35); //Expected output - Total cart value: $55
+
+//Task 8 - Savings Growth Projection
+
+//Recursive function that projects the savings growth by 5% annually until a maximum of 10 years is reached
+function calculateSavings(years, amount) {
+    //Checking if the years reached 10. If it did, the savings amount will be returned to two decimal places
+    if (years >= 10) return `Projected savings: $${amount.toFixed(2)}`;
+
+    //Increasing the amount by 5% and calling the function recursively for the next year
+    return calculateSavings(years + 1, amount * 1.05);
+};
+
+//Test cases - Values can be changed
+console.log(calculateSavings(8, 1000)); //Expected output - Projected savings: $1102.50
+console.log(calculateSavings(5, 5000)); //Expected output - Projected savings: $6381.41
